@@ -3,6 +3,8 @@ import Root from "../layout/Root";
 import Home from "../Pages/Home/Home";
 import About from "../Pages/About/About";
 import Career from "../Pages/Career/Career";
+import Login from "../Pages/Login/Login";
+import Register from "../Pages/Rgister/Register";
 
 const routes=createBrowserRouter([
     {
@@ -19,7 +21,15 @@ const routes=createBrowserRouter([
             },
             {
                 path:'/career',
-                element:<Career/>
+                element:<Career/>,
+            },
+            {
+                path:'/login',
+                element:<Login/>,
+            },
+            {
+                path:'/register',
+                element:<Register/>
             }
         ]
     }

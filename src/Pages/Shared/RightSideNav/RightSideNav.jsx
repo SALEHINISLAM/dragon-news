@@ -10,7 +10,7 @@ const RightSideNav = (props) => {
   return (
     <div>
       <div className="flex flex-col p-4 w-full space-y-4">
-        <h2 className="text-4xl font-bold text-black">Login With</h2>
+        <h2 className="text-3xl font-bold text-black">Login With</h2>
         <button className="btn btn-outline btn-accent m-2 text-sm">
           <FaGoogle /> Login with Google
         </button>
@@ -38,7 +38,7 @@ const RightSideNav = (props) => {
           </a>
         </div>
       </div>
-      <div className="flex flex-col p-2 m-3 bg-[#c2c2c2] justify-center w-full">
+      <div className="flex flex-col p-2 m-3 bg-[#c2c2c2] justify-center w-full rounded-lg">
         <h2 className="text-3xl font-bold text-black py-3">Q-Zone</h2>
         <img src="qZone1.png" alt="" />
         <img src="qZone2.png" alt="" />
