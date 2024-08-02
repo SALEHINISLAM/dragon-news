@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 
 const Root = props => {
     return (
-        <div>
+        <div className='bg-white'>
             <Outlet/>
         </div>
     );
