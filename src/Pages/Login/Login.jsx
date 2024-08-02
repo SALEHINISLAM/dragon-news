@@ -2,11 +2,13 @@ import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import LeftSideNav from "../Shared/LeftSideNav/LeftSideNav";
 import Navbar from "../Shared/Navbar/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = (props) => {
     const {signIn}=useContext(AuthContext)
+    const {location}=useLocation();
+    const navigate=useNavigate();
     const handleLogin=(event)=>{
         event.preventDefault();
         console.log(event.currentTarget);
@@ -16,7 +18,8 @@ const Login = (props) => {
         signIn(email,password)
         .then(res=>{
             console.log(res.user);
-            
+            //navigate
+            navigate(location?.state?location.state : '/')
         })
         .catch(error=>{
             console.log(error);
