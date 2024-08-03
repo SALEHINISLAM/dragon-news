@@ -7,7 +7,7 @@ import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = (props) => {
     const {signIn}=useContext(AuthContext)
-    const {location}=useLocation();
+    const location=useLocation();
     const navigate=useNavigate();
     const handleLogin=(event)=>{
         event.preventDefault();
@@ -19,7 +19,7 @@ const Login = (props) => {
         .then(res=>{
             console.log(res.user);
             //navigate
-            navigate(location?.state?location.state : '/')
+            navigate(location?.state? location.state : '/');
         })
         .catch(error=>{
             console.log(error);

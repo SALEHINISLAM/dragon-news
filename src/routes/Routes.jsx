@@ -6,6 +6,8 @@ import Career from "../Pages/Career/Career";
 import Login from "../Pages/Login/Login";
 import Register from "../Pages/Rgister/Register";
 import News from "../Pages/News/News";
+import PrivateRoute from "./PrivateRoute";
+import Category from "../Pages/Category/Category";
 
 const routes = createBrowserRouter([
   {
@@ -19,7 +21,8 @@ const routes = createBrowserRouter([
       },
       {
         path: "/news/:id",
-        element: <News />,
+        element: <PrivateRoute><News/></PrivateRoute>,
+        loader: ()=>fetch('/news.json')
       },
       {
         path: "/about",
@@ -37,6 +40,11 @@ const routes = createBrowserRouter([
         path: "/register",
         element: <Register />,
       },
+      {
+        path:'/category/:id',
+        element: <Category/>,
+        loader: ()=>fetch('/news.json'),
+      }
     ],
   },
 ]);
