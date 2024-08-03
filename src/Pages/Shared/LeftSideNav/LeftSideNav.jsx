@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { data } from 'autoprefixer';
 import { Link } from 'react-router-dom';
+import LeftNews from './LeftNews';
 
 const LeftSideNav = props => {
     const [categories, setCategories]=useState([]);
@@ -28,6 +29,7 @@ const LeftSideNav = props => {
                     )
                 }
             </ul>
+            <LeftNews/>
         </div>
     );
 };

@@ -11,7 +11,7 @@ import NewsCard from "./NewsCard";
 const Home = (props) => {
   const news = useLoaderData();
   return (
-    <div className="mx-auto container">
+    <div className="mx-auto container text-black">
       <Header />
       <BreakingNews />
       <Navbar />
