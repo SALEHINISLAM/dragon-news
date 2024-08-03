@@ -61,9 +61,9 @@ const RightSideNav = (props) => {
       </div>
       <div className="flex flex-col p-2 m-3 bg-[#c2c2c2] justify-center w-full rounded-lg">
         <h2 className="text-3xl font-bold text-black py-3">Q-Zone</h2>
-        <img src="qZone1.png" alt="" />
-        <img src="qZone2.png" alt="" />
-        <img src="qZone3.png" alt="" />
+        <img src="/qZone1.png" alt="" />
+        <img src="/qZone2.png" alt="" />
+        <img src="/qZone3.png" alt="" />
       </div>
       <div
         id="ads"
